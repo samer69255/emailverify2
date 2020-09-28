@@ -29,7 +29,7 @@ function verifyEmail(email) {
     console.log('error: ', err);
     if (err.message === 'refuse') {
       // The MX server is refusing requests from your IP address.
-      resolve('un');
+      resolve(false);
       console.log('err1')
     } else {
       // Decide what to do with other errors.
@@ -43,7 +43,7 @@ function verifyEmail(email) {
 
 (async function () {
   console.log('testing');
-  console.log(await verifyEmail('samer69255@gmail.com'));
+  console.log(await verifyEmail('samer6955@gmail.com'));
   console.log(await verifyEmail('samer1020399@gmail.com'));
 })();
 
